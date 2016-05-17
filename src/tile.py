@@ -1,12 +1,22 @@
 import pygame
 
-class Tile:
+class Tile(object):
     """
     Tile class for PyChess
-    """"
-    def __init__(self, color, image):
+    """
+    def __init__(self, color):
+        """
+        Paramaters: 'green', 'white', and 'black'
+        """
         self.color = color
-        self.image = image
+        if self.color == "green":
+            self.image = "../resources/green.png"
+        elif self.color == "white":
+            self.image = "../resources/white.png"
+        elif self.color == "black":
+            self.image = "../resources/black.jpg"
+        else:
+            raise ValueError()
         
     def get_color(self):
         """

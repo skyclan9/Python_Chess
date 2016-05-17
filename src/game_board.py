@@ -1,6 +1,6 @@
 import pygame
 
-class GameBoard:
+class GameBoard(object):
     """
     Game Board class for PyChess
     """
@@ -11,18 +11,18 @@ class GameBoard:
         self.rectArray = [[0 for x in range(self.width)] for y in range(self.height)]
         
     def fill_tile_array(self):
-        blackTile = Tile("black", "../resources/black.jpg")
-        whiteTile = Tile("white", "../resources/white.jpg")
+        from tile import Tile
+        whiteTile = Tile("white")
+        blackTile = Tile("black")
         for i in range(8):
             for k in range(8):
-               if i%2==0: 
+                if i%2==0:
                     if k%2==0:
-                        tile[i,k] = whiteTile
+                        self.tileArray[i][k] = whiteTile
                     else:
-                        tile[i,k] = blackTile
+                        self.tileArray[i][k] = blackTile
                 else:
                     if k%2==0:
-                        tile[i,k] = blackTile
+                        self.tileArray[i][k] = blackTile
                     else:
-                        tile[i,k] = whiteTile
-        
+                        self.tileArray[i][k] = whiteTile
