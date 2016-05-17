@@ -7,7 +7,7 @@ black = 0,0,0
 
 screen = pygame.display.set_mode(size)
 
-ball = pygame.image.load("ball.png")
+ball = pygame.image.load("ball.png") #not gonna work cuz that pic is gone
 ballrect = ball.get_rect()
 
 while 1:

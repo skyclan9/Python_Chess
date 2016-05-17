@@ -4,7 +4,7 @@ pygame.init()
 
 size = width, height = 722, 722
 surface = pygame.display.set_mode(size)
-background = pygame.image.load("resources/chessboard_722.png").convert()
+background = pygame.image.load("../resources/chessboard_722.png").convert()
 backgroundrect = background.get_rect()
 surface.blit(background, backgroundrect)
 pygame.display.update(backgroundrect)
