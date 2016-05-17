@@ -1,6 +1,6 @@
 import pygame
 
-class GamePiece:
+class GamePiece(object):
     """
     Game piece class for PyChess
     """
